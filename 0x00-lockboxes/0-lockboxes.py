@@ -17,7 +17,7 @@ def checkKeys(key, boxes, open_boxes):
 
 def canUnlockAll(boxes):
     """This function returns True if all the boxes can be unlocked and False if
-    they cannon."""
+    they cannot."""
     lis_en = len(boxes)
 
     if (boxes is None or lis_en == 0):

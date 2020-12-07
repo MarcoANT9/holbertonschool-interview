@@ -1,5 +1,7 @@
-def checkKeys(key, boxes, open_boxes):
+#!/usr/bin/python3
 
+def checkKeys(key, boxes, open_boxes):
+    """This is the function to use recursion."""
     for element in boxes[key]:
     
         if (element < len(boxes) and open_boxes[element] == False and boxes[key] != []):
@@ -7,11 +9,12 @@ def checkKeys(key, boxes, open_boxes):
             open_boxes = checkKeys(element, boxes, open_boxes)
         else:
             break
-        
+
     return open_boxes
 
 
 def canUnlockAll(boxes):
+    """This function returns True if all the boxes can be unlocked and False if they cannon."""
     lis_en = len(boxes)
 
     if boxes == None or lis_en == 0:

@@ -1,10 +1,13 @@
 def checkKeys(key, boxes, open_boxes):
+
     for element in boxes[key]:
+    
         if (element < len(boxes) and open_boxes[element] == False and boxes[key] != []):
             open_boxes[element] = True
             open_boxes = checkKeys(element, boxes, open_boxes)
         else:
             break
+        
     return open_boxes
 
 

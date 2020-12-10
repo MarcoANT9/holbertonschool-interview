@@ -2,7 +2,8 @@
 
 
 def checkKeys(key, boxes, open_boxes):
-    """This is the function to use recursion."""
+    """ This is a support function used for recursion, it returns the list that
+    says which boxes are open."""
     for element in boxes[key]:
 
         if (element < len(boxes) and open_boxes[element] is False and
@@ -10,7 +11,7 @@ def checkKeys(key, boxes, open_boxes):
             open_boxes[element] = True
             open_boxes = checkKeys(element, boxes, open_boxes)
         else:
-            break
+            continue
 
     return open_boxes
 

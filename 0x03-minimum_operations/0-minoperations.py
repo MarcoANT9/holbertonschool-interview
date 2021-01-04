@@ -10,10 +10,8 @@ def minOperations(n):
     paste."""
 
     count = 0
-    copy = "h"
     if (n < 2):
         return count
-
 
     string = "h"
     while (len(string) < n):
@@ -24,3 +22,6 @@ def minOperations(n):
         count += 1
 
     return count
+
+if __name__ == "__main__":
+    main()

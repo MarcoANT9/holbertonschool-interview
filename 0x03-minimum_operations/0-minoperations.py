@@ -3,6 +3,7 @@
 Main file for the operation counting.
 """
 
+
 def minOperations(n):
     """This program uses the module operation to determine when to copy the
     string, if the module between the number n and the lenght of the current

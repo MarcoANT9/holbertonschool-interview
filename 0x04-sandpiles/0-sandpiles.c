@@ -1,28 +1,6 @@
 #include "sandpiles.h"
 
 /**
- * print_grid - Print 3x3 grid
- * @grid: 3x3 grid
- *
- */
-static void print_grid(int grid[3][3])
-{
-	int i, j;
-
-	for (i = 0; i < 3; i++)
-	{
-		for (j = 0; j < 3; j++)
-		{
-			if (j)
-				printf(" ");
-			printf("%d", grid[i][j]);
-		}
-		printf("\n");
-	}
-}
-
-
-/**
  * is_balanced - Determines if a grid is balanced.
  *
  * @grid: A 3x3 grid, may not be balanced.
@@ -128,7 +106,16 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	while (is_balanced(grid1) == 0)
 	{
 		printf("=\n");
-		print_grid(grid1);
+		for (i = 0; i < 3; i++)
+		{
+			for (j = 0; j < 3; j++)
+			{
+				if (j)
+					printf(" ");
+				printf("%d", grid1[i][j]);
+			}
+			printf("\n");
+		}
 		balance_grid(grid1);
 	}
 

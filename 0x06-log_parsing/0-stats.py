@@ -22,7 +22,7 @@ if __name__ == "__main__":
                     status[key] += 1
             if print10Lines == 10:
                 print("File size: {:d}".format(size))
-                
+
                 for key in sorted(status.keys()):
                     if status[key]:
                         print("{}: {:d}".format(key, status[key]))

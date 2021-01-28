@@ -8,7 +8,6 @@ if __name__ == "__main__":
               "404": 0, "405": 0, "500": 0}
     size = 0
     print10Lines = 0
-    nFiles = 0
 
     try:
 
@@ -17,13 +16,13 @@ if __name__ == "__main__":
             unitSize = int(text.split('"')[2].split(" ")[1])
             size += unitSize
             print10Lines += 1
-            nFiles += 1
-            print("{} - {}".format(print10Lines, nFiles))
+
             for key in sorted(status.keys()):
                 if code == key:
                     status[key] += 1
             if print10Lines == 10:
                 print("File size: {:d}".format(size))
+                
                 for key in sorted(status.keys()):
                     if status[key]:
                         print("{}: {:d}".format(key, status[key]))

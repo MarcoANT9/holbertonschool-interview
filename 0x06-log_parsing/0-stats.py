@@ -3,10 +3,12 @@
 import sys
 
 if __name__ == "__main__":
+
     status = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0,
               "404": 0, "405": 0, "500": 0}
     size = 0
     print10Lines = 0
+    nFiles = 0
 
     try:
 
@@ -15,7 +17,8 @@ if __name__ == "__main__":
             unitSize = int(text.split('"')[2].split(" ")[1])
             size += unitSize
             print10Lines += 1
-
+            nFiles += 1
+            print("{} - {}".format(print10Lines, nFiles))
             for key in sorted(status.keys()):
                 if code == key:
                     status[key] += 1

@@ -11,8 +11,8 @@ if __name__ == "__main__":
     try:
 
         for text in sys.stdin:
-            code = text.split('"')[2].split(" ")[1]
-            unitSize = int(text.split('"')[2].split(" ")[2])
+            code = text.split('"')[2].split(" ")[0]
+            unitSize = int(text.split('"')[2].split(" ")[1])
             size += unitSize
             print10Lines += 1
 

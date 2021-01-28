@@ -34,5 +34,5 @@ if __name__ == "__main__":
         print("File size: {:d}".format(size))
 
         for key in sorted(status.keys()):
-            if status[key]:
+            if status[key] and status is int:
                 print("{}: {:d}".format(key, status[key]))

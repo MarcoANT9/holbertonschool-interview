@@ -10,7 +10,6 @@ if __name__ == "__main__":
     print10Lines = 0
 
     try:
-
         for text in sys.stdin:
             code = text.split('"')[2].split(" ")[0]
             unitSize = int(text.split('"')[2].split(" ")[1])
@@ -20,11 +19,11 @@ if __name__ == "__main__":
             for key in sorted(status.keys()):
                 if code == key:
                     status[key] += 1
+
             if print10Lines == 10:
                 print("File size: {:d}".format(size))
-
                 for key in sorted(status.keys()):
-                    if status[key]:
+                    if status[key] and status is int:
                         print("{}: {:d}".format(key, status[key]))
                 print10Lines = 0
 

@@ -32,8 +32,4 @@ int check_cycle(listint_t *list)
 		tortuga = tortuga->next;
 	}
 	return (0);
-
-
-
-
 }

@@ -19,7 +19,7 @@ int check_cycle(listint_t *list)
 
 	listint_t *conejo = list, *tortuga = list;
 
-	if (conejo->next == NULL)
+	if (list == NULL || conejo->next == NULL)
 		return (0);
 
 	while (conejo != NULL)

@@ -8,7 +8,7 @@
  * @start: Start point index.
  * @end: Finish point index.
  *
- * return: Pointer to root node of created tree.
+ * Return: Pointer to root node of created tree.
  */
 avl_t *tree_builder(avl_t *parent, int *array, size_t start, size_t end)
 {

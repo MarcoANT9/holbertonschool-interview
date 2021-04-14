@@ -15,7 +15,7 @@ def rain(walls):
 
     wallsLeng = len(walls)
 
-    if (wallsLeng == 0):
+    if (wallsLeng < 1):
         return 0
 
     totalRain = 0

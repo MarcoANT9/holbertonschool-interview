@@ -18,7 +18,6 @@ def rain(walls):
 
     rainWater = 0
 
-
     for element in range(len(walls)):
         first = walls[element]
         for wal in range(element):

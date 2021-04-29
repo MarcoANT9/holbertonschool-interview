@@ -11,7 +11,7 @@
  * Return: -> Position in which the first value is found (Int).
  *         -> -1 if the value is not found.
  */
-int search_value (int *array, size_t first_index, size_t last_index, int value)
+int search_value(int *array, size_t first_index, size_t last_index, int value)
 {
 	size_t i = first_index, position;
 

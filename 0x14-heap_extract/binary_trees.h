@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 /**========================================================================*/
 /**-STRUCTURES & DEFINITIONS-----------------------------------------------*/
@@ -42,7 +42,7 @@ typedef struct binary_tree_s heap_t;
 int heap_extract(heap_t **root);
 
 /** A. Print binary tree */
-static int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
+void binary_tree_print(const binary_tree_t *tree);
 
 /**========================================================================*/
 /**-SPECIAL NOTES & OTHERS-------------------------------------------------*/

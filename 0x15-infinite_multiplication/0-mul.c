@@ -24,9 +24,9 @@ static int check_int(char *num)
 }
 
 /**
- * strlen - Calculates the length of a string.
+ * _strlen - Calculates the length of a string.
  *
- * @string: String to measure.
+ * @s: String to measure.
  *
  * Return: The length of the string.
  */
@@ -53,7 +53,7 @@ static void manual_mul(int *total, char *argv[], int num1, int num2)
 	for (i = (num2 - 1); i >= 0; i--)
 	{
 		result = 0;
-		for (j = (num1 -1); j >= 0; j--)
+		for (j = (num1 - 1); j >= 0; j--)
 		{
 			prod = (argv[2][i] - '0') * (argv[1][j] - '0');
 			result = (prod / 10);
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 
 	manual_mul(total, argv, num1_len, num2_len);
 	i = *total == 0 ? 1 : 0;
-	while(i < (num1_len + num2_len))
+	while (i < (num1_len + num2_len))
 	{
 		printf("%d", total[i]);
 		i++;

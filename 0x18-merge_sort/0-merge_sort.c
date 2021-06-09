@@ -51,6 +51,29 @@ void merge_sub(int *array, int *listR, int *listL, size_t size)
 }
 
 /**
+ * malloc_list - Allocates memory for a list.
+ * @size: Size of the list.
+ *
+ * Return: Pointer to the head of the list.
+ */
+int *malloc_list(size_t size)
+{
+	return ((int *) malloc(size));
+}
+
+/**
+ * free_list - Frees a list from the memory
+ *
+ * @list: List to free.
+ *
+ * Return: Nothing (Void).
+ */
+void free_list(int *list)
+{
+	free(list);
+}
+
+/**
  * merge_sort - Sorts an array with the merge method.
  *
  * @array: Array to sort.
@@ -66,8 +89,8 @@ void merge_sort(int *array, size_t size)
 	size_t mid = size / 2, position;
 
 
-	listR = (int *) malloc(size);
-	listL = (int *) malloc(size);
+	listR = malloc_list(size);
+	listL = malloc_list(size);
 	if (size < 2 || array == NULL)
 		return;
 
@@ -80,6 +103,6 @@ void merge_sort(int *array, size_t size)
 	merge_sort(listL, mid);
 	merge_sort(listR, size - mid);
 	merge_sub(array, listR, listL, size);
-	free(listL);
-	free(listR);
+	free_list(listL);
+	free_list(listR);
 }

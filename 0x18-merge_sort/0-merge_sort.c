@@ -62,9 +62,12 @@ void merge_sub(int *array, int *listR, int *listL, size_t size)
  */
 void merge_sort(int *array, size_t size)
 {
-	int listR[444], listL[444];
+	int *listR, *listL;
 	size_t mid = size / 2, position;
 
+
+	listR = (int *) malloc(size);
+	listL = (int *) malloc(size);
 	if (size < 2 || array == NULL)
 		return;
 
@@ -77,4 +80,6 @@ void merge_sort(int *array, size_t size)
 	merge_sort(listL, mid);
 	merge_sort(listR, size - mid);
 	merge_sub(array, listR, listL, size);
+	free(listL);
+	free(listR);
 }

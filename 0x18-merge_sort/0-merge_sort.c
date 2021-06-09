@@ -62,7 +62,7 @@ void merge_sub(int *array, int *listR, int *listL, size_t size)
  */
 void merge_sort(int *array, size_t size)
 {
-	int listR[1024], listL[1024];
+	int listR[300], listL[300];
 	size_t mid = size / 2, position;
 
 

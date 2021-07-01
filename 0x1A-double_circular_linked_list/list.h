@@ -1,5 +1,5 @@
-#ifndef LIST_H
-#define LIST_H
+#ifndef DOUBLE_CIRCULAR_LIST_H
+#define DOUBLE_CIRCULAR_LIST_H
 
 /**========================================================================*/
 /**-LIBRARIES--------------------------------------------------------------*/

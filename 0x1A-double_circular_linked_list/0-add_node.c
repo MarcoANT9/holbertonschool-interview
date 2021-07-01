@@ -1,6 +1,5 @@
 #include "list.h"
 
-
 /**
  * create_list - Creates a node that references itself.
  *
@@ -28,7 +27,6 @@ List *create_list(List **list, char *str)
 	*list = new_node;
 	return (new_node);
 }
-
 
 /**
  * add_node_end - Adds a node at the end of a list.

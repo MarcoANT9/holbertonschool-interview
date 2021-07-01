@@ -7,7 +7,6 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
 /**========================================================================*/
 /**-STRUCTURES & DEFINITIONS-----------------------------------------------*/
@@ -39,6 +38,9 @@ List *add_node_end(List **list, char *str);
 
 /** 0-B. Creates a node at the beginning of a list. */
 List *add_node_begin(List **list, char *str);
+
+/** A. Creates a single node */
+List *create_list(List **list, char *str);
 
 /**========================================================================*/
 /**-SPECIAL NOTES & OTHERS-------------------------------------------------*/

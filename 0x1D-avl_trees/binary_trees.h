@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <limits.h>
 
 
@@ -45,10 +44,12 @@ typedef struct binary_tree_s avl_t;
 int binary_tree_is_avl(const binary_tree_t *tree);
 
 /** A. Print AVL Tree */
-static int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
+int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
 
+/** B. Create a node for the tree */
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
-
+void binary_tree_print(const binary_tree_t *tree);
 
 /**========================================================================*/
 /**-SPECIAL NOTES & OTHERS-------------------------------------------------*/

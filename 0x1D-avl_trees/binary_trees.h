@@ -1,6 +1,7 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
+
 /**========================================================================*/
 /**-LIBRARIES--------------------------------------------------------------*/
 /**========================================================================*/
@@ -43,12 +44,10 @@ typedef struct binary_tree_s avl_t;
 /** 0.Is AVL */
 int binary_tree_is_avl(const binary_tree_t *tree);
 
-/** A. Print AVL Tree */
-int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
-
-/** B. Create a node for the tree */
+/** A. Create a node for the tree */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
+/** B. Print a binary tree */
 void binary_tree_print(const binary_tree_t *tree);
 
 /**========================================================================*/

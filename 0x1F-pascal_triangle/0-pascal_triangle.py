@@ -27,4 +27,3 @@ def pascal_triangle(n):
         macro.append(vector_cpy)
 
     return macro
-    

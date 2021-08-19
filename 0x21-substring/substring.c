@@ -48,7 +48,7 @@ int *find_substring(char const *s, char const **words, int nb_words, int *n)
 				break;
 		}
 		if (j == nb_words)
-			*(posArray + count) = i, count +=1;
+			*(posArray + count) = i, count += 1;
 	}
 	free(match);
 	*n = count;
